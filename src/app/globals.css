@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 99%;
+    --foreground: 240 10% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 12%;
+    --primary: 243 75% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 62% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 10% 95%;
+    --muted-foreground: 240 5% 45%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 243 75% 59%;
+    --radius: 1rem;
+
+    --income: 152 69% 41%;
+    --expense: 0 72% 57%;
+    --savings: 262 68% 60%;
+    --bike: 215 14% 45%;
+  }
+
+  .dark {
+    --background: 230 25% 7%;
+    --foreground: 0 0% 96%;
+    --card: 230 20% 11%;
+    --card-foreground: 0 0% 96%;
+    --primary: 243 80% 68%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 174 55% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 230 15% 16%;
+    --muted-foreground: 230 8% 65%;
+    --accent: 38 92% 55%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 243 80% 68%;
+
+    --income: 152 55% 48%;
+    --expense: 0 70% 62%;
+    --savings: 262 65% 68%;
+    --bike: 215 14% 65%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+ html {
+    @apply overflow-x-hidden bg-background;
+  }
+
+body {
+  @apply bg-background text-foreground overflow-x-hidden;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y;
+}
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Respects notches / gesture bars when installed as a standalone PWA */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}
