@@ -5,19 +5,6 @@ A privacy-focused, offline-first personal finance manager built with Next.js
 (IndexedDB), and Recharts. All data lives entirely in your browser — nothing
 is ever sent to a server. No login, no cloud, no tracking.
 
-## Important note on how this was built
-
-I generated this project's source code without a live Node/npm install-and-run
-cycle against your exact dependency versions — I don't have the ability to run
-`npm run build` against the real npm registry from where I'm working. Every
-file has been hand-checked for import correctness (every `@/...` import path
-was verified to resolve to a real file) and structural correctness (brace/paren
-balance across all 80+ files), and I fixed several real bugs during that pass
-(a wrong type reference, IndexedDB boolean-index issues, unsafe CSS color
-string concatenation). That said, this is the first time this code will meet
-a real TypeScript compiler and bundler. Run the steps below, and if `npm run
-build` surfaces anything, that's expected for a project this size — send me
-the exact error and I'll fix it.
 
 ## Tech stack
 
